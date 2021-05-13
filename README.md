@@ -1,6 +1,6 @@
 # drift-php
 
-PHP bindings to the Drift API
+PHP bindings to the SalesLoft API
 
 ## Installation
 
@@ -8,7 +8,7 @@ This library requires PHP 7.1 and later
 
 The recommended way to install drift-php is through [Composer](https://getcomposer.org)
 
-This library is intended to speed up development time but is not a shortcut to reading the Drift API documentation. Many endpoints require specific and required fields for successful operation. Always read the documentation before using an endpoint.
+This library is intended to speed up development time but is not a shortcut to reading the SalesLoft API documentation. Many endpoints require specific and required fields for successful operation. Always read the documentation before using an endpoint.
 
 ```sh
 composer require mckltech/drift-php
@@ -19,61 +19,43 @@ composer require mckltech/drift-php
 Initialize your client using your access token:
 
 ```php
-use Drift\DriftClient;
+use SalesLoft\SalesLoftClient;
 
-$client = new DriftClient('ACCESS_TOKEN');
+$client = new SalesLoftClient('ACCESS_TOKEN');
 ```
 
-> - The access token is expected to be from your Drift Developer console or from a successful OAuth install: https://devdocs.drift.com/docs/authentication-and-scopes
+> - The access token is expected to be from your SalesLoft API Key console or from a successful OAuth install
 
 
 ## Support, Issues & Bugs
 
-This library is unofficial and is not endorsed or supported by Drift.
+This library is unofficial and is not endorsed or supported by SalesLoft.
 
 For bugs and issues, open an issue in this repo and feel free to submit a PR. Any issues that do not contain full logs or explanations will be closed. We need you to help us help you!
 
 ## API Versions
 
-This library is intended to work with the Drift API as published in April 2021.
+This library is intended to work with the SalesLoft V2 API as published in May 2021.
 
 ## Contacts
 
 ```php
-/** List Contacts */
-$client->contacts->list();
+/** List Users */
+$client->users->list();
 
-/** List 5 contacts with the email 'example@drift.com' */
-$client->contacts->list(['limit' => 5, 'email' => 'example@drift.com']);
-
-/** Create A Contact */
-$client->contacts->create(['email' => 'example@drift.com', 'name' => 'John Drift']);
-```
-
-## Conversations & Messages
-
-```php
-/** Create a Conversation */
-$client->messages->createConversation('example@drift.com', 'Hello John!');
-
-/** Create a new message in Conversation ID 12345 send by User ID 9876 */
-$client->messages->createMessage(12345, 'Let me check on that for you!', 9876);
-
-/** Add a private note by User ID 7654 to Conversation ID 12345 */
-$client->messages->createNote(12345, 'Called customer about refund request', 7654);
+/** Create A Person */
+$client->people->create(['email_address' => 'example@salesloft.com', 'first_name' => 'Sales', 'last_name' => 'Loft']);
 ```
 
 ## Supported Endpoints
 
-All endpoints follow a similar mechanism to the examples show above. Again, please ensure you read the Drift API documentation prior to use as there are numerous required fields for most POST/PUT/PATCH operations.
+All endpoints follow a similar mechanism to the examples show above. Again, please ensure you read the SalesLoft API documentation prior to use as there are numerous required fields for most POST/PUT/PATCH operations.
 
-- Accounts
-- Admin
-- Contacts
-- Messages
-- Conversations
-- Playbooks
-- GDPR
+- Cadences 
+- Users
+- People
+- Notes
+- Person Stages
 
 ## Exceptions
 
