@@ -82,6 +82,11 @@ class SalesLoftClient
      */
     public $notes;
 
+    /**
+     * @var SalesLoftAccounts $accounts
+     */
+    public $accounts;
+
     const SALESLOFT_API_URL = 'https://api.salesloft.com/v2';
 
     /**
@@ -99,6 +104,7 @@ class SalesLoftClient
         $this->cadenceMemberships = new SalesLoftCadenceMemberships($this);
         $this->notes = new SalesLoftNotes($this);
         $this->calls = new SalesLoftCalls($this);
+        $this->accounts = new SalesLoftAccounts($this);
 
         $this->accessToken = $accessToken;
 

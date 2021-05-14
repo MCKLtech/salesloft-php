@@ -6,7 +6,7 @@
     'aliases' => 
     array (
     ),
-    'reference' => 'ca4e93c820f7c906bb0bc2186a0e7c4c38028b34',
+    'reference' => '9b28866021826ad328e068d6d0307f2c2b05486e',
     'name' => 'mckltech/salesloft-php',
   ),
   'versions' => 
@@ -45,7 +45,7 @@
       'aliases' => 
       array (
       ),
-      'reference' => 'ca4e93c820f7c906bb0bc2186a0e7c4c38028b34',
+      'reference' => '9b28866021826ad328e068d6d0307f2c2b05486e',
     ),
     'myclabs/deep-copy' => 
     array (
@@ -447,15 +447,6 @@
       array (
       ),
       'reference' => 'c6c1022351a901512170118436c764e473f6de8c',
-    ),
-    'squizlabs/php_codesniffer' => 
-    array (
-      'pretty_version' => '3.6.0',
-      'version' => '3.6.0.0',
-      'aliases' => 
-      array (
-      ),
-      'reference' => 'ffced0d2c8fa8e6cdc4d695a743271fab6c38625',
     ),
     'symfony/deprecation-contracts' => 
     array (
