@@ -1,4 +1,4 @@
-# drift-php
+# salesloft-php
 
 PHP bindings to the SalesLoft API
 
@@ -11,7 +11,7 @@ The recommended way to install drift-php is through [Composer](https://getcompos
 This library is intended to speed up development time but is not a shortcut to reading the SalesLoft API documentation. Many endpoints require specific and required fields for successful operation. Always read the documentation before using an endpoint.
 
 ```sh
-composer require mckltech/drift-php
+composer require mckltech/salesloft-php
 ```
 
 ## Clients - API Key 

@@ -73,6 +73,11 @@ class SalesLoftClient
     public $cadenceMemberships;
 
     /**
+     * @var SalesLoftCalls $calls
+     */
+    public $calls;
+
+    /**
      * @var SalesLoftNotes $notes;
      */
     public $notes;
@@ -93,6 +98,7 @@ class SalesLoftClient
         $this->cadences = new SalesLoftCadences($this);
         $this->cadenceMemberships = new SalesLoftCadenceMemberships($this);
         $this->notes = new SalesLoftNotes($this);
+        $this->calls = new SalesLoftCalls($this);
 
         $this->accessToken = $accessToken;
 
