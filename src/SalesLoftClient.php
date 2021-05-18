@@ -87,6 +87,11 @@ class SalesLoftClient
      */
     public $accounts;
 
+    /**
+     * @var SalesLoftCustomFields $customFields
+     */
+    public $customFields;
+
     const SALESLOFT_API_URL = 'https://api.salesloft.com/v2';
 
     /**
@@ -105,6 +110,7 @@ class SalesLoftClient
         $this->notes = new SalesLoftNotes($this);
         $this->calls = new SalesLoftCalls($this);
         $this->accounts = new SalesLoftAccounts($this);
+        $this->customFields = new SalesLoftCustomFields($this);
 
         $this->accessToken = $accessToken;
 
